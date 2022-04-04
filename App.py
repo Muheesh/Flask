@@ -13,6 +13,10 @@ def Contact_page():
 def Home_page():
     return "This is home page"
 
+@app.route('/gallery')
+def Gallery_page():
+    return "This is gallery"
+
 
 if __name__=="__main__":
     app.run()
