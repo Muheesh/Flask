@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -7,15 +8,15 @@ def welcome():
 
 @app.route('/contact')
 def Contact_page():
-    return "This is contact page"
+    return render_template("contact.html")
 
 @app.route('/home')
 def Home_page():
-    return "This is home page"
+    return render_template("home.html")
 
 @app.route('/gallery')
 def Gallery_page():
-    return "This is gallery"
+    return render_template("gallery.html")
 
 
 if __name__=="__main__":
